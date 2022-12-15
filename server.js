@@ -8,7 +8,7 @@ const cors=require("cors")
 const {todoRouter}=require("./Router/Ship.router")
 require("dotenv").config()
 
-const PORT=process.env.Port || 8400
+const PORT=process.env.PORT || 8400
 
 app.use(cors())
 
