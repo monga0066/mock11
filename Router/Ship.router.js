@@ -8,10 +8,10 @@ const {Router}=require("express")
 
  
 
-todoRouter.get("/getship", async (req, res) => {
+todoRouter.get("/", async (req, res) => {
   const id=req.headers.id;
   const result = await ShipModel.find({ user_id:id});
-  res.send(result);
+  res.send({msg:"Get data"});
 });
 
 todoRouter.post("/addship",  async (req, res) => {
