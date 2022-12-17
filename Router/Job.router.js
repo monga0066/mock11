@@ -11,7 +11,7 @@ const {Router}=require("express")
 jobRouter.get("/", async (req, res) => {
   const id=req.headers.id;
   const result = await JobModel.find({ user_id:id});
-  res.send({msg:"Get data"});
+  res.send(result);
 });
 
 jobRouter.post("/addjob",  async (req, res) => {
